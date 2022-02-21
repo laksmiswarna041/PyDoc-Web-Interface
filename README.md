@@ -8,3 +8,9 @@ Scope:
 1. more visual represenation of data
 2. structured and more vivid representation
 3. Eg pydoc -p 1234 - opens localhost index on server and and there is an unstructured data 
+
+To do:
+1. how python actually works
+2. how it identifies the arguments
+3. how python installation works
+4. how python libraries work
