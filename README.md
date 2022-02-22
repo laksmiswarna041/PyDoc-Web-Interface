@@ -14,3 +14,6 @@ To do:
 2. how it identifies the arguments
 3. how python installation works
 4. how python libraries work
+
+Some findings:
+1. pydoc foo is about equal to python -c "help('foo')
