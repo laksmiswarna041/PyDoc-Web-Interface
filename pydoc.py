@@ -10,7 +10,7 @@ match = re.search(r'requests', search)
 res=requests.__doc__
 #print(res)
 #print(my_function.__doc__)
-f = open('C:/Users/VC/Desktop/PydocWebInterface/sample.html','w')
+f = open('C:/Users/VC/Desktop/PydocWebInterface/index.html','w')
 
 message = """
 <html>
@@ -18,17 +18,25 @@ message = """
 	<body>
 		<input type="text" id="str" placeholder="Search string"/>
 		<input type="button" id="search" value="Search" onclick="msg()"/>
+		<?PHP
+        echo shell_exec("python pydoc.py");
+        ?>
 	</body>
 	<script>
 	function msg(){
 		let search=document.getElementById("str").value;
 		console.log(search)
-		console.log({{res}})
+		
 	}
 	</script>
 </html>
 """
-
-f.write(message)
+result="""
+<html>
+<body>
+{{res}}
+</body>
+</html>
+"""
+f.write(message+result)
 f.close()
-
