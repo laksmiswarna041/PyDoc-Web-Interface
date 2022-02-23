@@ -1,5 +1,24 @@
-import requests,json
-response=requests.get('https://docs.python.org/3.8/library/pydoc')#can get any input
 
+import requests,pydoc,webbrowser
 
-jprint(response.content)
+#sprint(pydoc.__doc__)
+  
+#print("Using __doc__:")
+#print(requests.__doc__)
+res=requests.__doc__
+print(res)
+#print(my_function.__doc__)
+f = open('C:/Users/VC/Desktop/PydocWebInterface/sample.html','w')
+
+message = """
+<html>
+	<head></head>
+	<body>
+		<input type="text" id="str" placeholder="Search string"/>
+		<input type="button" id="search" value="Search"/>
+	</body>
+</html>
+"""
+
+f.write(message)
+f.close()
