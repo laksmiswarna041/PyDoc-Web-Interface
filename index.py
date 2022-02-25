@@ -288,6 +288,33 @@ zDict={
 	'zlib':zlib.__doc__,
 	'zoneinfo':zoneinfo.__doc__
 }
+allDict={}
+allDict.update(aDict)
+allDict.update(bDict)
+allDict.update(cDict)
+allDict.update(dDict)
+allDict.update(eDict)
+allDict.update(fDict)
+allDict.update(gDict)
+allDict.update(hDict)
+allDict.update(iDict)
+allDict.update(jDict)
+allDict.update(kDict)
+allDict.update(lDict)
+allDict.update(mDict)
+allDict.update(nDict)
+allDict.update(oDict)
+allDict.update(pDict)
+allDict.update(qDict)
+allDict.update(rDict)
+allDict.update(sDict)
+allDict.update(tDict)
+allDict.update(uDict)
+allDict.update(vDict)
+allDict.update(wDict)
+allDict.update(xDict)
+allDict.update(zDict)
+
 app = Flask(__name__)
 
 @app.route('/')
