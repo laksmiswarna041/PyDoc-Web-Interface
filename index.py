@@ -30,8 +30,8 @@ import calendar,cgi,cgitb,chunk,cmath,cmd,code,codecs,codeop,collections,colorsy
 cDict={
 	'calendar':calendar.__doc__,
 	'cgi':cgi.__doc__,
-	'cgitb':__doc__,
-	'chunk':__doc__,
+	'cgitb':cgitb.__doc__,
+	'chunk':chunk.__doc__,
 	'cmath':cmath.__doc__,
 	'cmd':cmd.__doc__,
 	'code':code.__doc__,
@@ -43,7 +43,6 @@ cDict={
 	'concurrent':concurrent.__doc__,
 	'configparser':configparser.__doc__,
 	'contextlib':contextlib.__doc__,
-	'contextvars':contextvars.__doc__,
 	'copy':copy.__doc__,
 	'copyreg':copyreg.__doc__,
 	'cProfile':cProfile.__doc__,
@@ -319,11 +318,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def welcome():
-   return render_template('home.html')
+   return render_template('home.html',dictRes=allDict)
 
 @app.route('/home')
 def home():
-   return render_template('home.html')
+   return render_template('home.html',dictRes=allDict)
 
 @app.route('/search',methods = ['POST', 'GET'])
 def result():
@@ -380,6 +379,8 @@ def result():
       	return redirect(url_for('w',dictRes=wDict))
       if firstChar=='x':
       	return redirect(url_for('x',dictRes=xDict))
+      if firstChar=='y':
+      	return redirect(url_for('y',dictRes="Error: There are no modules starting with 'y'"))
       if firstChar=='z':
       	return redirect(url_for('z',dictRes=zDict))
 
@@ -460,7 +461,7 @@ def r():
 
 @app.route('/s', methods = ['GET', 'POST'])
 def s():
-    return (render_template('s.html.html',dictRes=sDict))
+    return (render_template('s.html',dictRes=sDict))
 
 @app.route('/t', methods = ['GET', 'POST'])
 def t():
@@ -482,8 +483,13 @@ def w():
 def x():
     return (render_template('x.html',dictRes=xDict))
 
+@app.route('/y', methods = ['GET', 'POST'])
+def y():
+    return (render_template('y.html',dictRes="Error: There are no modules starting with 'y'"))
+
 @app.route('/z', methods = ['GET', 'POST'])
 def z():
     return (render_template('z.html',dictRes=zDict))
+
 if __name__ == '__main__':
    app.run(debug=True)
