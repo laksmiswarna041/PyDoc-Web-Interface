@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<style>
+			table,  td {
+ 				border: 1px solid black;
+		}
+		#icon{
+			position: absolute;
+			right: 10px;
+		}
+		tr:nth-child(even) {
+            background-color: #F5F7D5;
+        }	
+        tr:nth-child(odd){
+        	background-color: #E8E9FD; 
+        }
+         body{
+        	font-family: 'Garamond';
+        }
+		</style>
+	</head>
+	<body>
+		<a href="{{ url_for('home') }}" id="icon">Home</a><br><br>
+
+		<center><table border = 1>
+         {% for key, value in dictRes.items() %}
+            <tr>
+               <th> {{ key }} </th>
+               <td> {{ value }} </td>
+            </tr>
+         {% endfor %}
+      </table>
+	<br><br>
+	
+</center>
+
+	</body>
+</html>

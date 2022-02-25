@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<style>
+			table,  td {
+ 				border: 1px solid black;
+		}
+		
+		 tr:nth-child(even) {
+            background-color: #F5F7D5;
+        }
+        tr:nth-child(odd){
+        	background-color: #E8E9FD; 
+        }
+         body{
+        	font-family: 'Garamond';
+        }
+		</style>
+	</head>
+	<body>
+		
+
+		<center><table border = 1>
+			<tr><td>
+        {{dictRes}}</td></tr>
+      </table><br><br>
+      <a href="{{ url_for('home') }}" id="icon">Home</a><br><br>
+	<br><br>
+	
+</center>
+
+	</body>
+</html>
