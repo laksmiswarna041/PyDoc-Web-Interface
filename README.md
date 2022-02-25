@@ -18,3 +18,13 @@ MODULES:
 3. PyDoc implementation(get the body of the text) - pyDoc
 4. Show search result - result
 5. Display result in a well presented structure - customResult
+
+Installation & Running procedure:
+1. pip install virtualenv
+2. mkdir newproj
+3. cd newproj
+4. virtualenv venv
+5. venv\scripts\activate
+6. pip install Flask
+7. Open CMD and run 'python index.py'
+8. The application opens on 127.0.0.1:5000
