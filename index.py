@@ -306,63 +306,62 @@ def result():
       print(letter)
       print(firstChar)
       if firstChar=='a':
-
-      	return redirect(url_for(render_template('a',dictRes=aDict)))
+      	return redirect(url_for('a',dictRes=aDict))
       if firstChar=='b':
-      	return redirect(url_for(render_template('b',dictRes=bDict)))
+      	return redirect(url_for('b',dictRes=bDict))
       if firstChar=='c':
-      	return redirect(url_for(render_template('c',dictRes=cDict)))
+      	return redirect(url_for('c',dictRes=cDict))
       if firstChar=='d':
-      	return redirect(url_for(render_template('d',dictRes=dDict)))
+      	return redirect(url_for('d',dictRes=dDict))
       if firstChar=='e':
-      	return redirect(url_for(render_template('e',dictRes=eDict)))
+      	return redirect(url_for('e',dictRes=eDict))
       if firstChar=='f':
-      	return redirect(url_for(render_template('f',dictRes=fDict)))
+      	return redirect(url_for('f',dictRes=fDict))
       if firstChar=='g':
-      	return redirect(url_for(render_template('g',dictRes=gDict)))
+      	return redirect(url_for('g',dictRes=gDict))
       if firstChar=='h':
-      	return redirect(url_for(render_template('h',dictRes=hDict)))
+      	return redirect(url_for('h',dictRes=hDict))
       if firstChar=='i':
-      	return redirect(url_for(render_template('i',dictRes=iDict)))
+      	return redirect(url_for('i',dictRes=iDict))
       if firstChar=='j':
-      	return redirect(url_for(render_template('j',dictRes=jDict)))
+      	return redirect(url_for('j',dictRes=jDict))
       if firstChar=='k':
-      	return redirect(url_for(render_template('k',dictRes=kDict)))
+      	return redirect(url_for('k',dictRes=kDict))
       if firstChar=='l':
-      	return redirect(url_for(render_template('l',dictRes=lDict)))
+      	return redirect(url_for('l',dictRes=lDict))
       if firstChar=='m':
-      	return redirect(url_for(render_template('m',dictRes=mDict)))
+      	return redirect(url_for('m',dictRes=mDict))
       if firstChar=='n':
-      	return redirect(url_for(render_template('n',dictRes=nDict)))
+      	return redirect(url_for('n',dictRes=nDict))
       if firstChar=='o':
-      	return redirect(url_for(render_template('o',dictRes=oDict)))
+      	return redirect(url_for('o',dictRes=oDict))
       if firstChar=='p':
-      	return redirect(url_for(render_template('p',dictRes=pDict)))
+      	return redirect(url_for('p',dictRes=pDict))
       if firstChar=='q':
-      	return redirect(url_for(render_template('q',dictRes=qDict)))
+      	return redirect(url_for('q',dictRes=qDict))
       if firstChar=='r':
-      	return redirect(url_for(render_template('r',dictRes=rDict)))
+      	return redirect(url_for('r',dictRes=rDict))
       if firstChar=='s':
-      	return redirect(url_for(render_template('s',dictRes=sDict)))
+      	return redirect(url_for('s',dictRes=sDict))
       if firstChar=='t':
-      	return redirect(url_for(render_template('t',dictRes=tDict)))
+      	return redirect(url_for('t',dictRes=tDict))
       if firstChar=='u':
-      	return redirect(url_for(render_template('u',dictRes=uDict)))
+      	return redirect(url_for('u',dictRes=uDict))
       if firstChar=='v':
-      	return redirect(url_for(render_template('v',dictRes=vDict)))
+      	return redirect(url_for('v',dictRes=vDict))
       if firstChar=='w':
-      	return redirect(url_for(render_template('w',dictRes=wDict)))
+      	return redirect(url_for('w',dictRes=wDict))
       if firstChar=='x':
-      	return redirect(url_for(render_template('x',dictRes=xDict)))
+      	return redirect(url_for('x',dictRes=xDict))
       if firstChar=='z':
-      	return redirect(url_for(render_template('z',dictRes=zDict)))
+      	return redirect(url_for('z',dictRes=zDict))
 
 
 #Jinja2 (the template rendering component of Flask) allows you to use the url_for function to dynamically create a url, for a given view function.
 #re-directing to the paths
 @app.route('/a', methods = ['GET', 'POST'])
 def a():
-    return render_template("a.html",dictRes=aDict)
+    return render_template("/a.html",dictRes=aDict)
 
 @app.route('/b', methods = ['GET', 'POST'])
 def b():
